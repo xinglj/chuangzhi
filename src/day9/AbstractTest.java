@@ -11,6 +11,9 @@ public class AbstractTest {
 		
 		Programmers p1 = new Programmers("ÕÅÈı",01,10000);
 		p1.work();
+		
+		manager m1 = new manager("lisi", 11, 20000, 2000);
+		m1.work();
 
 	}
 
@@ -70,12 +73,13 @@ class manager extends Employee{
 	
 	int pay2;
 	
-	manager(String name,int id,double pay){
+	manager(String name,int id,double pay,int pay2){
 		super(name,id,pay);
+		this.pay2 = pay2;
 	}
 	
 	public void work(){
-		System.out.println("manager");
+		System.out.println("manager"+"   "+name+"   "+pay2);
 	}
 }
 
